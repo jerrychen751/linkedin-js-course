@@ -3,20 +3,29 @@
  */
 
 const backpack = {
-  name: "Everyday Backpack",
-  volume: 30,
-  color: "grey",
-  pocketNum: 15,
+  // Attributes
+  name: "Backpack", 
+  volume: 30, 
+  color: "grey", 
+  pocketNum: 15, 
   strapLength: {
-    left: 26,
-    right: 26,
-  },
-  lidOpen: false,
-  toggleLid: function (lidStatus) {
+    left: 26, 
+    right: 26, 
+  }, 
+  lidOpen: false, 
+
+  // Methods
+  setLidStatus: function (lidStatus) {
     this.lidOpen = lidStatus;
-  },
-  newStrapLength: function (lengthLeft, lengthRight) {
-    this.strapLength.left = lengthLeft;
-    this.strapLength.right = lengthRight;
-  },
-};
+  }, 
+
+  setStrapLength: function(leftStrapLength, rightStrapLength) {
+    this.strapLength.left = leftStrapLength;
+    this.strapLength.right = rightStrapLength;
+  }
+}
+
+console.log("backpack obj: ", backpack)
+console.log("backpack obj name: ", backpack.name)
+var query = "pocketNum";
+console.log("backpack obj pocket num: ", backpack[query]) // bracket notation is useful when you don't know the attribute name at runtime
